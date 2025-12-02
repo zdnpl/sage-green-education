@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Buka Index-index - ESG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../main.css" />
+
+    <style>
+      /* Override CSS khusus untuk halaman ini agar gambar Stockbit lebar */
+      .sb-wide-card {
+        flex-direction: column; /* Ubah jadi atas bawah */
+        align-items: flex-start; /* Rata kiri */
+        text-align: left;
+      }
+
+      .sb-wide-image-container {
+        max-width: 100% !important; /* Paksa lebar penuh */
+        width: 100%;
+        margin-top: 20px;
+        border: 2px solid #333; /* Border tipis biar rapi */
+      }
+
+      .sb-wide-image-container img {
+        width: 100%; /* Gambar mengikuti lebar container */
+        height: auto;
+      }
+
+      /* Hover effect pada gambar */
+      .hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        border-radius: 15px; /* Sesuaikan radius container */
+      }
+      .sb-wide-image-container:hover .hover-overlay {
+        opacity: 1;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../src/img/LOGONOBG.png" width="50" height="50" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index-hijau.html">Indeks Hijau</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item ms-2">
+              <a class="btn btn-sage" href="mulai-belajar.html">Mulai Belajar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="sage-fade-in-up">
+      <div class="spacer p-5"></div>
+
+      <div class="container mt-5 mb-5" style="max-width: 700px">
+        <div class="idx-header-section text-center">
+          <h1 class="idx-main-title">CARA CEK PERUSAHAAN HIJAU</h1>
+          <p class="idx-subtitle">Belajar dasar-dasar jual-beli saham dengan contoh sederhana by <span class="idx-highlight">SAGE</span></p>
+        </div>
+
+        <div class="container menu-section p-0">
+          <div class="accordion custom-sage-accordion" id="sageLearningAccordion">
+            <div class="accordion-item mb-4">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed fw-bold fs-4 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="fas fa-leaf me-3 text-success"></i> Cara Cek dengan IDX
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#sageLearningAccordion">
+                <div class="accordion-body bg-light-cream">
+                  <div class="idx-card mb-5">
+                    <div class="idx-inner-header">
+                      <i class="fas fa-chart-line idx-icon-box"></i>
+                      <h2 class="idx-card-title">CARA BUKA <br />INDEX-INDEX</h2>
+                    </div>
+                    <p class="idx-desc-text">
+                      Indeks saham adalah kumpulan saham yang dikelompokkan berdasarkan kriteria tertentu untuk menggambarkan pergerakan pasar atau sektor tertentu. Indeks ini membantu investor menilai kinerja pasar dan memilih strategi
+                      investasi yang sesuai.
+                    </p>
+                    <div class="row align-items-center mb-4">
+                      <div class="col-md-6 text-center">
+                        <i class="fa-solid fa-chart-line text-success opacity-50" style="font-size: 8rem"></i>
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="idx-manfaat-title">Manfaat Indeks</h4>
+                        <div class="idx-list">
+                          <ul>
+                            <li>Menilai kinerja pasar</li>
+                            <li>Membantu strategi investasi</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <img src="../src/img/ilustrasi/tentang.jpg" alt="Investor Illustration" class="idx-man-img" />
+                  </div>
+
+                  <div class="idx-kehati-container mb-5 text-center">
+                    <h2 class="idx-kehati-title">KENAPA MENGGUNAKAN SRI-KEHATI?</h2>
+                    <a href="https://kehati.or.id/indeks-sri-kehati/" target="_blank" class="idx-link-small d-block mb-3">https://kehati.or.id/indeks-sri-kehati/</a>
+
+                    <div class="idx-logo-placeholder mb-3">
+                      <img src="../src/img/perusahaan hijau/cara buka index/kehati logo.png" alt="Logo KEHATI" class="idx-logo-img" style="max-width: 150px" />
+                    </div>
+
+                    <p class="idx-kehati-desc">
+                      SRI-KEHATI adalah indeks saham di BEI yang berisi perusahaan-perusahaan dengan kinerja keberlanjutan terbaik berdasarkan penilaian Yayasan KEHATI. Indeks ini menyoroti emiten yang dinilai peduli lingkungan, sosial, dan
+                      tata kelola sehingga cocok untuk investasi berbasis keberlanjutan.
+                    </p>
+
+                    <div class="idx-photo-frame">
+                      <span class="idx-photo-caption">SRI-KEHATI</span>
+                      <img src="../src/img/perusahaan hijau/cara buka index/kehati.jpg" alt="Acara Penghargaan SRI-KEHATI" class="idx-real-photo img-fluid rounded shadow-sm" />
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div class="sr-def-card mt-5 border-0 shadow-none bg-transparent p-0">
+                    <div class="sr-def-header justify-content-center">
+                      <i class="fa-solid fa-clipboard-check sr-icon-clipboard"></i>
+                      <h2 class="sr-def-title"><span style="background-color: antiquewhite; border-radius: 10%; padding: 0 5px">CEK</span> INDEX-INDEX</h2>
+                    </div>
+
+                    <div class="sr-step-container">
+                      <h3 class="sr-step-title"><span class="sr-step-num">1.</span> Buka <a href="https://idx.co.id" class="text-primary">idx.co.id</a> pada pencarian</h3>
+                      <div class="sr-browser-mockup">
+                        <img src="../src/img/perusahaan hijau/sustainability report/step1.jpg" alt="Screenshot IDX Homepage" class="sr-browser-img" />
+                      </div>
+                    </div>
+
+                    <div class="sr-step-container">
+                      <h3 class="sr-step-title"><span class="sr-step-num">2.</span> Klik “Data Pasar → Index Saham”</h3>
+                      <div class="sr-browser-mockup">
+                        <img src="../src/img/perusahaan hijau/cara buka index/step1.jpg" alt="Screenshot Menu ESG IDX" class="sr-browser-img" />
+                      </div>
+                    </div>
+
+                    <div class="sr-step-container">
+                      <h3 class="sr-step-title"><span class="sr-step-num">3.</span> Pilih eg: SRI-KEHATI</h3>
+                      <div class="sr-browser-mockup">
+                        <img src="../src/img/perusahaan hijau/cara buka index/step2.jpg" alt="Screenshot List Perusahaan" class="sr-browser-img" />
+                      </div>
+                    </div>
+
+                    <div class="sr-step-container">
+                      <h3 class="sr-step-title"><span class="sr-step-num">4.</span> Lihat konstituen & kinerja</h3>
+                      <p class="idx-desc-text">
+                        Perhatikan kode-kode dari nama perusahaan yang telah tercantum, kode itu adalah perusahaan-perusahaan yang masuk ke dalam indeks SRI-KEHATI dan memiliki kinerja baik dalam mendorong usaha keberlanjutan.
+                      </p>
+                      <div class="sr-browser-mockup">
+                        <img src="../src/img/perusahaan hijau/cara buka index/step3.jpg" alt="Screenshot Penghargaan ESG" class="sr-browser-img" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold fs-4 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <i class="fas fa-leaf me-3 text-success"></i> Cara Cek dengan Stockbit
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#sageLearningAccordion">
+                <div class="accordion-body bg-light-cream">
+                    <div class="sb-card">
+                      <div class="sb-card-header">
+                        <div class="sb-title-icon-box">
+                          <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h2 class="sb-card-title">CARA CEK STOCKBIT</h2>
+                      </div>
+
+                      <p class="sb-desc">Stockbit adalah aplikasi untuk analisis dan transaksi jual beli saham yang menyediakan data fundamental serta informasi pendukung investasi.</p>
+
+                      <div class="row">
+                        <div class="col-md-7">
+                          <h4 class="sb-section-title">Cara Kerja Stockbit</h4>
+
+                          <div class="sb-feature-item">
+                            <div class="sb-feature-icon">
+                              <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <div class="sb-feature-text">Mengambil keputusan lebih mudah</div>
+                          </div>
+
+                          <div class="sb-feature-item">
+                            <div class="sb-feature-icon">
+                              <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="sb-feature-text">Grafik dan <br />berita</div>
+                          </div>
+
+                          <div class="sb-feature-item">
+                            <div class="sb-feature-icon">
+                              <i class="fas fa-user"></i>
+                            </div>
+                            <div class="sb-feature-text">Fitur <br />komunitas</div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-5">
+                          <div class="sb-illustration-container">
+                            <img src="../src/img/ilustrasi/tentang.jpg" alt="Man using Stockbit" class="sb-man-img" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spacer p-5"></div>
+
+                  <!-- isi sri kehati -->
+                  <div class="idx-kehati-container">
+                    <h2 class="idx-kehati-title">KENAPA MENGGUNAKAN SRI-KEHATI?</h2>
+                    <a href="https://kehati.or.id/indeks-sri-kehati/" target="_blank" class="idx-link-small">https://kehati.or.id/indeks-sri-kehati/</a>
+
+                    <div class="idx-logo-placeholder">
+                      <img src="../src/img/perusahaan hijau/cara buka index/kehati logo.png" alt="Logo KEHATI" class="idx-logo-img" />
+                    </div>
+
+                    <p class="idx-kehati-desc">
+                      SRI-KEHATI adalah indeks saham di BEI yang berisi perusahaan-perusahaan dengan kinerja keberlanjutan terbaik berdasarkan penilaian Yayasan KEHATI. Indeks ini menyoroti emiten yang dinilai peduli lingkungan, sosial, dan
+                      tata kelola sehingga cocok untuk investasi berbasis keberlanjutan.
+                    </p>
+
+                    <div class="idx-photo-frame">
+                      <span class="idx-photo-caption">SRI-KEHATI</span>
+                      <img src="../src/img/perusahaan hijau/cara buka index/kehati.jpg" alt="Acara Penghargaan SRI-KEHATI" class="idx-real-photo" />
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="sb-header-section text-center">
+                    <h1 class="sb-main-title">CARA CEK STOCKBIT</h1>
+                    <p class="sb-subtitle">Belajar dasar-dasar jual-beli saham dengan contoh sederhana by <span class="sb-highlight">SAGE</span></p>
+                  </div>
+
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                      <div class="cara-step-card sb-wide-card">
+                        <div class="cara-step-content w-100">
+                          <h3 class="cara-step-title">1. Buka aplikasi Stockbit</h3>
+                        </div>
+                        <div class="cara-screenshot-container sb-wide-image-container position-relative" data-bs-toggle="modal" data-bs-target="#modalStep1">
+                          <img src="../src/img/perusahaan hijau/stockbit/cara1.jpg" alt="Screenshot Aplikasi Sekuritas" class="img-fluid" />
+                        </div>
+                      </div>
+
+                      <div class="cara-step-card sb-wide-card">
+                        <div class="cara-step-content w-100">
+                          <h3 class="cara-step-title">2. Search Bar</h3>
+                        </div>
+                        <div class="cara-screenshot-container sb-wide-image-container position-relative" data-bs-toggle="modal" data-bs-target="#modalStep2">
+                          <img src="../src/img/perusahaan hijau/stockbit/cara-kecil2.png" alt="Screenshot Aplikasi Sekuritas" class="img-fluid" />
+                        </div>
+                      </div>
+
+                      <div class="cara-step-card sb-wide-card">
+                        <div class="cara-step-content w-100">
+                          <h3 class="cara-step-title">3. Cari "Sri-KEHATI"</h3>
+                        </div>
+                        <div class="cara-screenshot-container sb-wide-image-container position-relative" data-bs-toggle="modal" data-bs-target="#modalStep3">
+                          <img src="../src/img/perusahaan hijau/stockbit/cara3.jpg" alt="Screenshot Aplikasi Sekuritas" class="img-fluid" />
+                        </div>
+                      </div>
+
+                      <div class="cara-step-card sb-wide-card">
+                        <div class="cara-step-content w-100">
+                          <h3 class="cara-step-title">4. Buka & lihat daftar saham</h3>
+                        </div>
+                        <div class="cara-screenshot-container sb-wide-image-container position-relative" data-bs-toggle="modal" data-bs-target="#modalStep4">
+                          <img src="../src/img/perusahaan hijau/stockbit/cara-kecil4.png" alt="Screenshot Aplikasi Sekuritas" class="img-fluid" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div class="footer-sage">SAGE</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

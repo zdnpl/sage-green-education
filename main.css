@@ -1,0 +1,1962 @@
+/* Mendefinisikan gerakan dari bawah ke posisi semula */
+@keyframes sageFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Mulai dari 40px di bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+  }
+}
+
+/* Class untuk diterapkan ke Body atau Wrapper */
+.sage-fade-in-up {
+  /* Menjalankan animasi selama 0.8 detik dengan gerakan halus */
+  animation: sageFadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  /* Penting: opacity 0 di awal agar tidak kedip */
+  opacity: 0;
+  /* Forwards memastikan elemen tetap di posisi akhir (visible) setelah animasi selesai */
+}
+
+/* --- Custom CSS untuk menyesuaikan dengan Desain --- */
+:root {
+  --primary-green: #5b8c51; /* Warna hijau SAGE */
+  --dark-text: #2c3e50;
+  --light-bg: #f9fbf9;
+  --dark-green: #2e523e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-text);
+  background-color: #fff;
+}
+
+/* Navbar */
+/* Navbar Styling */
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-green) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+.navbar-brand span {
+  font-size: 0.6rem;
+  color: #888;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.nav-link {
+  color: #555 !important;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+.nav-link.active {
+  color: var(--primary-green) !important;
+  font-weight: 700;
+}
+.btn-sage {
+  background-color: var(--primary-green);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+.btn-sage:hover {
+  background-color: #4a7540;
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 4rem 0;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  color: #222;
+}
+.hero-desc {
+  color: #666;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+.btn-outline-sage {
+  border: 1px solid #ccc;
+  color: #555;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  font-weight: 500;
+}
+.btn-outline-sage:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+/* Cards Section */
+.feature-card {
+  border: none;
+  background: transparent;
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: transform 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #4a7540;
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #e8f5e9; /* Hijau sangat muda */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  color: var(--primary-green);
+  font-size: 2rem;
+}
+.card-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Quiz Section */
+.quiz-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+.quiz-container {
+  border: 4px solid #333;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.quiz-screen-mockup {
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  padding: 2rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mock-lines {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer-sage {
+  text-align: right;
+  font-weight: 700;
+  color: var(--primary-green);
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
+
+/* --- Halaman Tentang Styling --- */
+.page-header {
+  margin-top: 2rem;
+}
+.breadcrumb-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.big-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #3a5a40; /* Warna hijau tua teks SAGE */
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.mid-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3a5a40; /* Warna hijau tua teks SAGE */
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Box "Apa yang dapat kamu pelajari" */
+.learning-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 3rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--dark-green);
+}
+.learning-header {
+  background-color: var(--dark-green);
+  color: white;
+  padding: 15px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.learning-body {
+  background-color: #fdfdfd;
+  padding: 25px;
+}
+
+.check-list-item {
+  display: flex;
+  align-items: start;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+.check-list-item i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-top: 2px; /* Align icon */
+}
+.check-list-item span {
+  color: #333; /* Warna teks item */
+}
+
+/* Bottom Mission Text */
+.mission-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: justify; /* Agar rapi seperti dokumen */
+}
+
+/* --- CSS Tambahan Khusus Halaman Ini --- */
+
+/* Style untuk Section Header (Judul Kategori) */
+.section-label {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+.label-pro {
+  color: #2e7d32;
+} /* Hijau Tua */
+.label-risk {
+  color: #c62828;
+} /* Merah Tua */
+
+/* Style untuk Kartu Berita */
+.news-card {
+  background: #fff;
+  border: 1px solid #f0f0f0; /* Border halus */
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Bayangan tipis */
+  transition: transform 0.2s;
+}
+.news-card:hover {
+  border-color: #ddd;
+}
+
+/* Header Berita (Logo + Judul) */
+.news-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+.news-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+.news-meta {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Link Url */
+.news-link {
+  font-size: 0.8rem;
+  color: #0d6efd;
+  text-decoration: none;
+  word-break: break-all;
+  display: block;
+  margin-bottom: 10px;
+}
+.news-link:hover {
+  text-decoration: underline;
+}
+
+/* Screenshot Berita */
+.news-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-top: 10px;
+}
+
+/* CSS Khusus Halaman Materi (Bisa dipindah ke main.css) */
+
+/* Judul Besar dengan Ikon */
+.materi-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+.header-icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #e8f5e9; /* Hijau muda pudar */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 2.5rem;
+}
+.materi-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--dark-green); /* Menggunakan variabel yg sudah ada */
+  margin-bottom: 0;
+}
+
+/* Bagian Ilustrasi Utama */
+.main-illustration-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+.illustration-caption {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Kartu Konsep (3 Kolom) */
+.concept-card {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 15px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+.concept-card:hover {
+  transform: translateY(-5px);
+}
+.concept-icon {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+/* Ikon kecil checkmark/tanda panah */
+.sub-icon {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+  background: white;
+  border-radius: 50%;
+  color: #2c3e50;
+}
+.concept-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #333;
+}
+.concept-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Fun Fact Box */
+.fun-fact-box {
+  background-color: #dcedc8; /* Hijau sage agak gelap sedikit */
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-top: 40px;
+  text-align: left;
+  border-left: 5px solid var(--primary-green);
+}
+.fun-fact-title {
+  font-weight: 800;
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.fun-fact-text {
+  color: #333;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Container Putih (agar mirip kertas seperti di desain) */
+.paper-container {
+  background: white;
+  border-radius: 0 0 20px 20px;
+  padding: 40px;
+  /* Opsional: Shadow agar terlihat mengambang */
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.05); */
+}
+
+/* --- CSS Khusus Halaman Green Economy --- */
+
+/* 1. Container Kertas (Background Cream) */
+.paper-content {
+  background-color: #fffbf5; /* Warna cream sangat muda */
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #f0eee8;
+}
+
+/* 2. Header Style */
+.header-icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #e0f2f1; /* Cyan muda pudar */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #26a69a;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+/* Judul menggunakan Font Serif agar mirip gambar */
+.green-title-serif {
+  color: var(--primary-green);
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.subtitle-small {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* 3. List Item Style */
+.list-item-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+/* Styling Ikon Kompleks (Layering) */
+.icon-illustration-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0; /* Agar ikon tidak mengecil */
+  margin-right: 25px;
+}
+.main-icon {
+  font-size: 4rem;
+  color: #81c784; /* Hijau muda ikon */
+  opacity: 0.8;
+}
+.sub-icon-overlay {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* Badge Nomor (1, 2, 3) */
+.number-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: var(--dark-green);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #fffbf5; /* Border warna background agar 'memotong' */
+}
+
+/* Teks Konten */
+.content-title {
+  color: var(--dark-green);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.content-desc {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 4. Fun Fact Box (Sama seperti sebelumnya) */
+.fun-fact-box {
+  background-color: #dcedc8;
+  border-radius: 15px;
+  padding: 20px 30px;
+  border-left: 6px solid var(--primary-green);
+  margin-top: 1rem;
+}
+.fun-fact-title {
+  font-weight: 800;
+  color: var(--dark-green);
+  margin-bottom: 5px;
+}
+
+/* green economy bagian */
+.ge-paper-card {
+  background-color: #fffbf5; /* Cream lembut */
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin: 0 auto;
+  border: 1px solid #f0eee8;
+}
+
+/* 2. Header Section */
+.ge-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.ge-icon-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #c8e6c9; /* Hijau muda pudar */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e7d32;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+/* Font Serif khusus Judul Halaman ini */
+.ge-title-serif {
+  color: var(--dark-green, #2e523e); /* Fallback ke hijau tua jika var belum load */
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* 3. Definisi Text */
+.ge-definition-text {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+/* 4. Grid Icon Fitur */
+.ge-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ge-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  /* Gradient Text Effect (Hijau) */
+  background: -webkit-linear-gradient(#66bb6a, #2e7d32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modifikasi Icon Kuning (Lampu) */
+.ge-icon-yellow {
+  background: -webkit-linear-gradient(#fdd835, #f57f17) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.ge-feature-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444;
+  margin-top: 5px;
+}
+
+/* Trik Khusus Icon CO2 (Awan + Teks) */
+.ge-co2-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+.ge-co2-cloud {
+  font-size: 3.5rem;
+  color: #c8e6c9; /* Warna awan pudar */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ge-co2-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #2e7d32;
+}
+
+/* 5. Fun Fact Box */
+.ge-fun-fact {
+  background-color: #dcedc8; /* Hijau sage muda */
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin-top: 10px;
+}
+.ge-fun-fact-title {
+  font-weight: 800;
+  color: var(--dark-green, #2e523e);
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.ge-fun-fact-desc {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Image Adjustment */
+.ge-hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 280px; /* Batasi tinggi gambar */
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* dampak investasi hijau bagian */
+/* 1. Header Section */
+.dampak-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 3rem;
+}
+
+/* Lingkaran Ikon Header */
+.dampak-header-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e7d32;
+  font-size: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Judul Serif Hijau */
+.dampak-title-serif {
+  font-family: "Merriweather", serif;
+  color: var(--dark-green, #3a5a40);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* 2. Kartu Grid (Card) */
+.dampak-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative; /* Untuk patokan badge absolute */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03); /* Bayangan halus */
+  border: 1px solid #f0f0f0;
+  height: 100%; /* Agar tinggi kartu sama rata */
+  transition: transform 0.3s ease;
+}
+
+.dampak-card:hover {
+  transform: translateY(-5px);
+  border-color: #c8e6c9;
+}
+
+/* Badge Nomor Hijau (1, 2, 3, 4) */
+.dampak-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: #43a047; /* Hijau badge */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Area Ikon Tengah Kartu */
+.dampak-icon-area {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+/* Styling Ikon Besar */
+.dampak-icon-main {
+  font-size: 4rem;
+  /* Efek Gradient pada Ikon agar terlihat lebih '3D' seperti gambar */
+  background: -webkit-linear-gradient(#66bb6a, #2e7d32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Teks Deskripsi Kartu */
+.dampak-text-bold {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  display: block; /* Agar baris baru */
+}
+.dampak-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 3. Footer Illustration (Pemandangan Bawah) */
+.dampak-bottom-scene {
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.dampak-scene-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0 0 20px 20px;
+  opacity: 0.9;
+}
+
+/* Responsive Fix untuk Judul di HP */
+@media (max-width: 768px) {
+  .dampak-header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .dampak-title-serif {
+    font-size: 1.8rem;
+  }
+}
+
+/* mulai belajar bagian */
+.menu-section {
+  padding: 4rem 0;
+}
+
+/* Styling Baris (Row) Item */
+.menu-item-row {
+  display: flex;
+  align-items: center; /* Vertically center */
+  margin-bottom: 1rem; /* Jarak antar item besar */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Efek Hover agar terasa interaktif */
+.menu-item-row:hover {
+  transform: translateY(-5px);
+}
+.menu-item-row:hover .menu-title {
+  color: var(--primary-green, #5b8c51);
+}
+
+/* Styling Gambar */
+.menu-img-container {
+  text-align: center;
+}
+.menu-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  /* Opsional: Drop shadow halus pada gambar */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.05));
+}
+
+/* Styling Teks */
+.menu-content {
+  padding: 0 20px;
+}
+
+.menu-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  transition: color 0.3s;
+}
+
+.menu-desc {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Responsive Mobile: Perkecil font & margin */
+@media (max-width: 768px) {
+  .menu-item-row {
+    margin-bottom: 4rem;
+    flex-direction: column-reverse; /* Agar gambar selalu di atas teks jika diinginkan, atau biarkan default */
+  }
+  .menu-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .menu-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
+  /* Khusus Row 2 (Teks Kiri, Gambar Kanan) di mobile harus dibalik urutannya biar konsisten */
+  .menu-mobile-reverse {
+    flex-direction: column !important;
+  }
+}
+
+/* cara jual beli saham bagian */
+/* 1. Typography Header */
+.cara-header-section {
+  text-align: left; /* Sesuai gambar rata kiri */
+  margin-bottom: 3rem;
+  padding-bottom: 20px;
+}
+
+.cara-main-title {
+  font-family: "Poppins", sans-serif; /* Menggunakan font sans-serif tebal/tinggi */
+  font-weight: 800; /* Extra Bold */
+  font-size: 2.5rem;
+  color: var(--primary-green, #5b8c51);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* Menggunakan font Condensed/Tall style jika ingin sangat mirip, 
+ tapi Poppins 800 uppercase sudah cukup mendekati */
+
+.cara-subtitle {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 400;
+}
+.cara-brand-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* 2. Step Card Box */
+.cara-step-card {
+  background-color: #f9fbf9; /* Latar belakang sangat muda */
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  /* Flex wrap agar responsif di HP */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cara-step-content {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+/* Badge Angka Hitam (1) */
+.cara-step-badge {
+  background-color: #222;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0; /* Agar tidak gepeng */
+  margin-top: 5px;
+}
+
+.cara-step-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.cara-step-desc {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Ilustrasi Kecil di Kanan (Login Mockup) */
+.cara-step-illustration {
+  max-width: 120px;
+  height: auto;
+}
+
+/* 3. Phone Screenshot Container */
+.cara-screenshot-container {
+  max-width: 350px; /* Lebar HP standar */
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bayangan agar timbul */
+  border: 8px solid #333; /* Bezel HP */
+  background-color: #000;
+}
+
+.cara-screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container Gambar */
+.cara-screenshot-container {
+  position: relative; /* Penting untuk overlay */
+  overflow: hidden; /* Agar zoom tidak keluar garis */
+  border-radius: 10px;
+  cursor: pointer; /* Mengubah kursor jadi jari telunjuk */
+  transition: all 0.3s ease;
+}
+
+/* Efek saat container di-hover: Sedikit bayangan & Zoom halus */
+.cara-screenshot-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Efek Zoom pada Gambar */
+.cara-screenshot-container img.cara-screenshot-img {
+  transition: transform 0.5s ease;
+  width: 100%; /* Pastikan gambar fit */
+}
+
+.cara-screenshot-container:hover img.cara-screenshot-img {
+  transform: scale(1.05); /* Gambar membesar 5% */
+}
+
+/* Overlay Hitam Transparan & Icon (Optional tapi keren) */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Hitam transparan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0; /* Awalnya sembunyi */
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+}
+
+.hover-overlay i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Munculkan overlay saat container di-hover */
+.cara-screenshot-container:hover .hover-overlay {
+  opacity: 1;
+}
+
+/* cara cek perusahaan hijau bagian */
+/* 1. Header Section */
+.cek-header-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.cek-main-title {
+  font-family: "Poppins", sans-serif; /* Menggunakan font tebal */
+  font-weight: 800; /* Extra Bold */
+  font-size: 2.2rem;
+  color: var(--primary-green, #5b8c51); /* Hijau SAGE */
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.cek-subtitle {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
+}
+.cek-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* 2. Hero Image (Orang Hijau) */
+.cek-hero-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cek-hero-img {
+  max-width: 300px; /* Sesuaikan ukuran gambar */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* 3. Menu List Container */
+.cek-menu-container {
+  max-width: 700px; /* Batasi lebar agar rapi di tengah */
+  margin: 0 auto;
+  padding: 20px;
+  /* Opsional: Background cream tipis di belakang list seperti di gambar */
+  background-color: #fcfdfc;
+  border-radius: 20px;
+}
+
+/* 4. Menu Item (Tombol) */
+.cek-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fffbf5; /* Warna cream sangat muda */
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #222;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.cek-menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-green, #5b8c51);
+}
+
+/* Bagian Kiri (Ikon + Teks) */
+.cek-item-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styling Ikon Illustratif */
+.cek-icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; /* Ukuran ikon besar */
+}
+
+/* Teks Menu */
+.cek-item-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Panah Kanan */
+.cek-arrow {
+  color: #333;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.cek-menu-item:hover .cek-arrow {
+  transform: translateX(5px);
+  color: var(--primary-green, #5b8c51);
+}
+
+/* Warna Ikon Spesifik (Sesuai Gambar) */
+.icon-report {
+  color: #4db6ac;
+} /* Teal/Tosca */
+.icon-esg {
+  color: #66bb6a;
+} /* Hijau Cerah */
+.icon-index {
+  color: #2e7d32;
+} /* Hijau Tua */
+.icon-stockbit {
+  color: #7cb342;
+} /* Hijau Lime/Olive */
+
+/* sustainability report */
+/* 1. Header Section */
+.sr-header-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.sr-main-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--primary-green, #5b8c51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.sr-subtitle {
+  font-size: 1rem;
+  color: #333;
+}
+.sr-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* 2. Definition Box (Bagian Teori) */
+.sr-def-card {
+  background-color: #fcfdfc;
+  border: 1px solid #eef5ee;
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin-bottom: 4rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.sr-def-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center di desktop sesuai gambar pertama */
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.sr-icon-clipboard {
+  font-size: 3.5rem;
+  color: var(--primary-green, #5b8c51);
+  background-color: #e8f5e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sr-def-title {
+  font-family: "Poppins", sans-serif; /* Judul ini Sans Serif tebal */
+  font-weight: 800;
+  font-size: 2rem;
+  color: #4a6645; /* Hijau agak abu/sage */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.sr-desc-text {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* List Styling */
+.sr-list ul {
+  list-style: none;
+  padding-left: 10px;
+}
+.sr-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 500;
+}
+.sr-list li::before {
+  content: "\f111"; /* FontAwesome circle dot */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 0.5rem;
+  color: var(--primary-green, #5b8c51);
+}
+
+/* Box 'Cara Investor Membaca' */
+.sr-tips-box {
+  background-color: #f7fbf7; /* Hijau sangat muda */
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 30px;
+  border: 1px solid #e0eadd;
+  position: relative;
+}
+.sr-tips-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+.sr-tips-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 4rem;
+  color: #81c784;
+  opacity: 0.5;
+}
+
+/* 3. Tutorial Steps (Langkah 1-4) */
+.sr-step-container {
+  margin-bottom: 4rem;
+}
+
+.sr-step-title {
+  font-family: "Merriweather", serif; /* Font Serif Hijau Tebal */
+  font-weight: 900;
+  color: #1b5e20; /* Hijau Tua */
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Styling Angka pada Judul */
+.sr-step-num {
+  font-size: 2rem;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+/* Screenshot Browser */
+.sr-browser-mockup {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.sr-browser-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .sr-def-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sr-step-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* skor esg bagian */
+/* 1. Header Section */
+.esg-header-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.esg-main-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--primary-green, #5b8c51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.esg-subtitle {
+  font-size: 1rem;
+  color: #333;
+}
+.esg-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* 2. Main Content Card (Latar Cream) */
+.esg-card {
+  background-color: #fffbf5; /* Cream lembut */
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0eee8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Card Header (Icon + Title) */
+.esg-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align like design */
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.esg-badge-icon {
+  font-size: 3rem;
+  color: #4a6645; /* Hijau tua */
+}
+
+.esg-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #4a6645; /* Hijau tua */
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.esg-desc {
+  text-align: center; /* Sesuai gambar, teks rata tengah/kiri terlihat rapi */
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* 3. Middle Section: Components & Speedometer */
+.esg-components-title {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.esg-comp-list {
+  list-style: none;
+  padding: 0;
+}
+.esg-comp-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #444;
+  font-size: 1.1rem;
+}
+.esg-comp-icon {
+  width: 30px;
+  text-align: center;
+  color: var(--primary-green, #5b8c51);
+  font-size: 1.5rem;
+}
+
+/* Speedometer Visual */
+.esg-gauge-container {
+  text-align: center;
+  position: relative;
+}
+.esg-gauge-icon {
+  font-size: 6rem;
+  /* Gradient Text untuk efek merah-kuning-hijau */
+  background: -webkit-linear-gradient(left, #e57373, #ffd54f, #81c784);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.esg-gauge-label {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  line-height: 1.2;
+  margin-top: -10px; /* Tarik ke atas mendekati ikon */
+}
+
+/* 4. Bottom Section: Tips Box */
+.esg-tips-box {
+  background-color: #f1f8f1; /* Hijau pudar */
+  border-radius: 15px;
+  padding: 30px 25px 0 25px; /* Bottom padding 0 untuk gambar */
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden; /* Potong gambar jika keluar */
+}
+
+.esg-tips-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.esg-tips-list ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.esg-tips-list li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Ilustrasi Orang di Kanan Bawah */
+.esg-tips-img-container {
+  text-align: right;
+  margin-top: -20px; /* Overlap ke atas sedikit */
+}
+.esg-tips-img {
+  max-width: 180px;
+  height: auto;
+  margin-right: -10px;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .esg-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .esg-gauge-container {
+    margin-top: 30px;
+  }
+  .esg-tips-img-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* cara buka index index bagian */
+
+/* Global Styles untuk halaman ini */
+.idx-section-spacer {
+  margin-bottom: 5rem;
+}
+
+/* --- BAGIAN 1: CARA BUKA INDEX --- */
+.idx-header-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.idx-main-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--primary-green, #5b8c51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.idx-subtitle {
+  font-size: 1rem;
+  color: #333;
+}
+.idx-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* Card Cream */
+.idx-card {
+  background-color: #fffbf5; /* Cream lembut */
+  border-radius: 20px;
+  padding: 40px 30px;
+  border: 1px solid #f0eee8;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Inner Title with Icon */
+.idx-inner-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.idx-icon-box {
+  font-size: 3rem;
+  color: #66bb6a; /* Hijau cerah */
+}
+.idx-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #4a6645;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.idx-desc-text {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Manfaat Section (Grid) */
+.idx-manfaat-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.idx-list ul {
+  padding-left: 20px;
+  list-style: none;
+}
+.idx-list li {
+  margin-bottom: 8px;
+  position: relative;
+  color: #333;
+}
+.idx-list li::before {
+  content: "•";
+  color: var(--primary-green, #5b8c51);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Illustration Man at Bottom */
+.idx-man-img {
+  display: block;
+  margin: 20px auto 0 auto;
+  max-width: 250px;
+  height: auto;
+}
+
+/* --- BAGIAN 2: SRI KEHATI --- */
+.idx-kehati-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.idx-kehati-title {
+  font-family: "Poppins", sans-serif; /* Condensed style look */
+  font-weight: 800;
+  font-size: 2rem;
+  color: #558b45; /* Hijau Kehati */
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.idx-link-small {
+  font-size: 0.85rem;
+  color: #0d6efd;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Logo Kehati Mockup */
+.idx-logo-placeholder {
+  margin-bottom: 25px;
+}
+.idx-logo-img {
+  max-width: 250px;
+}
+
+/* Text Description (Serif look based on image) */
+.idx-kehati-desc {
+  font-family: "Merriweather", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Photo Frame */
+.idx-photo-frame {
+  position: relative;
+  display: inline-block;
+}
+.idx-photo-caption {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 5px;
+  display: block;
+}
+.idx-real-photo {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* stockbit bagian */
+/* 1. Header Section */
+.sb-header-section {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.sb-main-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--primary-green, #5b8c51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.sb-subtitle {
+  font-size: 1rem;
+  color: #333;
+}
+.sb-highlight {
+  color: var(--primary-green, #5b8c51);
+  font-weight: 700;
+}
+
+/* 2. Main Content Card */
+.sb-card {
+  background-color: #fffbf5; /* Cream lembut */
+  border-radius: 20px;
+  padding: 40px 40px 0 40px; /* Padding bawah 0 agar gambar bisa nempel bawah */
+  border: 1px solid #f0eee8;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden; /* Agar gambar tidak keluar border radius */
+}
+
+/* Card Header (Icon + Title) */
+.sb-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+/* Kotak Ikon Judul */
+.sb-title-icon-box {
+  width: 60px;
+  height: 70px;
+  border: 3px solid #81c784; /* Border Hijau Muda */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a6645;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.sb-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #4a6645; /* Hijau Tua */
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.sb-desc {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+/* 3. Section "Cara Kerja Stockbit" */
+.sb-section-title {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* Feature Items List */
+.sb-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.sb-feature-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #66bb6a; /* Outline Hijau */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a6645;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sb-feature-text {
+  font-weight: 700;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* 4. Illustration Image */
+.sb-illustration-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.sb-man-img {
+  max-width: 100%;
+  height: auto;
+  /* Trik agar gambar menempel di dasar kartu */
+  margin-bottom: -10px;
+  width: 250px; /* Atur ukuran ilustrasi */
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .sb-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .sb-illustration-container {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .sb-man-img {
+    width: 200px;
+  }
+}
+
+/* navbar bagian */
+/* --- Styling Navbar Mobile (Responsif) --- */
+
+/* Hanya berlaku di layar HP/Tablet (di bawah 992px) */
+@media (max-width: 991.98px) {
+  /* 1. Container Menu Dropdown */
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px; /* Sudut melengkung */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan halus */
+    margin-top: 15px; /* Jarak dari header atas */
+    border: 1px solid #f0f0f0;
+  }
+
+  /* 2. Link Navigasi */
+  .navbar-nav .nav-link {
+    margin: auto;
+    padding: 12px 0; /* Area tekan lebih luas */
+    border-bottom: 1px solid #f5f5f5; /* Garis pemisah halus */
+    font-weight: 500;
+  }
+
+  /* Hapus garis di item terakhir */
+  .navbar-nav .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+
+  /* 3. Tombol Mulai Belajar */
+  .w-100-mobile {
+    width: 100%;
+  }
+
+  .btn-sage {
+    width: 100%; /* Tombol lebar penuh */
+    padding: 12px; /* Lebih tebal biar enak dipencet */
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  /* 4. Efek saat menu dibuka (Optional Animation) */
+  .navbar-collapse.show {
+    animation: slideDown 0.3s ease-out;
+  }
+}
+
+/* Styling Hamburger Menu agar tidak terlihat kotak biasa */
+.navbar-toggler:focus {
+  box-shadow: none; /* Hilangkan highlight biru bawaan bootstrap */
+  outline: none;
+}
+.navbar-toggler {
+  /* background-color: #f8f9fa; */
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* revisi 1 */
+/* --- Styling Custom Accordion SAGE --- */
+
+.custom-sage-accordion .accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 15px !important;
+  overflow: hidden;
+  margin-bottom: 20px; /* Jarak antar dropdown */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Tombol Header Accordion */
+.custom-sage-accordion .accordion-button {
+  background-color: #fff;
+  color: var(--dark-text, #333);
+  padding: 20px 25px;
+  border-radius: 15px !important; /* Agar sudut tetap bulat saat tertutup */
+  transition: all 0.3s ease;
+}
+
+/* Saat Accordion Dibuka (Active) */
+.custom-sage-accordion .accordion-button:not(.collapsed) {
+  background-color: #e8f5e9; /* Hijau sangat muda */
+  color: var(--primary-green, #5b8c51);
+  box-shadow: none; /* Hilangkan glow biru default bootstrap */
+  border-bottom: 1px solid #c8e6c9;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* Ikon Panah Accordion (Chevron) - Ubah warna jadi hijau */
+.custom-sage-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235b8c51'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Area Isi (Body) */
+.bg-light-cream {
+  background-color: #fcfdfc; /* Putih agak cream dikit */
+  padding: 30px 20px;
+}
+
+/* Penyesuaian Mobile Touch Effect di dalam Accordion */
+.mobile-touch-effect {
+  border: 1px solid transparent; /* Default border transparan */
+}
+.mobile-touch-effect:hover {
+  background-color: white;
+  border-color: #eee;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* custom css mandiri */
+
+.templateTombol {
+  cursor: pointer;
+}
+
+.warnaIjoMuda {
+  color: var(--primary-green);
+}
+
+.warnaIjoTua {
+  color: var(--dark-green);
+}
